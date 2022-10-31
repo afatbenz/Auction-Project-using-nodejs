@@ -598,6 +598,27 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Activate Item to Open Bid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3100/api/item/activate/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"item",
+						"activate",
+						"1"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

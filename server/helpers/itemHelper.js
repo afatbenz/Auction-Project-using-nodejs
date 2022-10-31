@@ -181,10 +181,36 @@ const deleteItem = async (req, res) => {
     }
 }
 
+const activateItem = async (req, res) => {
+    try{
+        let detailItem = await itemModel.detailItem(req.params.itemID)
+            detailItem = detailItem.data[0]
+
+        if(detailItem.created_by === req.session.userid){
+            if(detailItem.status !== 1){
+                return {code:400, message:`Item already ${itemStatus[detailItem.status]}`}
+            }
+            const dataItem = {
+                status:          2
+            }
+
+            const response = await dbModel.updateQuery(dataItem, 'item', 'id', req.params.itemID)
+            if(response.code === 200){
+                response.message = 'Item is open to bid'
+            }
+            return response;
+        }
+        return {code:400, message:'Access Denied'}
+    }catch(error){
+        throw new Error(error)
+    }
+}
+
 module.exports = {
     submitItem,
     getListItem,
     updateItem,
     getDetailItem,
-    deleteItem
+    deleteItem,
+    activateItem
 }

@@ -126,6 +126,13 @@ const validateConfirmBid = (data) => {
     });
     return schema.validate(data);
 };
+
+const validateOpenBid = (data) => {
+    const schema = Joi.object({
+        itemID: Joi.number().required()
+    });
+    return schema.validate(data);
+};
   
 module.exports = {
     validateLogin,
@@ -142,5 +149,6 @@ module.exports = {
     validateTransaction,
     validateBid,
     validateAcceptBid,
-    validateConfirmBid
+    validateConfirmBid,
+    validateOpenBid
 }

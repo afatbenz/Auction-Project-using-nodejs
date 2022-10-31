@@ -84,10 +84,24 @@ const deleteItem = async (req, res)=> {
     }
 }
 
+const activateItem = async (req, res)=> {
+    try{
+        generalHelper.authValidation(req, res)
+        const { error } = validationHelper.validateOpenBid(req.params)
+        if (error) return reply.InvalidRequest(res, error)
+
+        const response = await itemHelper.activateItem(req, res)
+        return reply.send(res, response)
+    }catch(err){
+        return reply.errorInternalServer(res,err)
+    }
+}
+
 router.post('/submit', submitItem)
 router.get('/list', getListItem)
 router.post('/update', updateItem)
 router.get('/detail/:itemID', getDetailItem)
 router.post('/delete', deleteItem)
+router.get('/activate/:itemID', activateItem)
 
 module.exports = router;

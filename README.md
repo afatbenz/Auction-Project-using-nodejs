@@ -27,6 +27,7 @@ You can see the list below, what APIs are available
 17. `/api/bid/accept` [POST] To accept bid
 18. `/api/bid/confirm` [POST] To confirm and purchase bid
 19. `/api/bid/cancel` [POST] To cancel bid
+20. `/api/item/activate/{itemID}` [GET] activate item to open bid
 
 
 
@@ -43,3 +44,9 @@ OK, follow these steps
 ## Want an example of using the API?
 Yes, you just need to import our postman collection. You can get it [here](https://github.com/afatbenz/Auction-Project-using-nodejs/blob/main/db/Jitera.postman_collection.json).
 You only need to change the payload, query and parameters that have been provided
+
+## What's not perfect?
+There are many points that are not perfect. For example, email notifications that are still blocked by gmail and cron to check items automatically have not been provided.
+To get around the auction activation cron, we can use the API `/api/item/activate/{itemID}`
+
+For problems sending OTP code email, the sent OTP can be seen in the database.
