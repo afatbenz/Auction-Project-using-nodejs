@@ -1,0 +1,34 @@
+{
+    "companyName": "PT. Maju Bersama Siapa",
+    "companyPhone": "6281335884729",
+    "companyEmail": "afatbenz.api@gmail.com",
+    "defaultEmail": "muhammad.9228@students.amikom.ac.id",
+    "defaultEmailPassword2": "@fatBenzAPI",
+    "defaultEmailPassword": "Pawestri27",
+    "clientID": "155504419296-tol5suh7bphbarfbqmkabfbgcpjh70u6.apps.googleusercontent.com",
+    "secretClient": "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",
+    "authorize": "4/0ARtbsJqMd0DcOC6Zlw-vGQamBzfwopmkwWIhyzZM0n15HcsMsbHekA3_ztsABD0xbDR5Ng",
+    "refresh_token": "1//04jJwb0UrKxOaCgYIARAAGAQSNwF-L9IrjYf5pIQveAWWtvvvBCurIyg7fFHlm18mzsBVpS5YDJtHiRUZRFie0KTCGvE7pZPhzz0",
+    "secretKey": "TvG2022#",
+    "loginExpiry": 1800000,
+    "menu":[
+        {
+            "id": "1",
+            "title": "Home",
+            "url": "/"
+        },{
+            "id": "2",
+            "title": "Cards",
+            "url": "/cards"
+        },{
+            "id": "3",
+            "title": "Profile",
+            "url": "/profile"
+        },
+        {
+            "id": "4",
+            "title": "Logout",
+            "url": "/logout"
+        }
+    ]
+}
