@@ -1,9 +1,11 @@
 # Bidding-With-Nodejs
 This is a simple API project for auction. This project covers authentication, auction and digital wallet needs.
 
+
 ## Environment
 We are using NodeJS Express v18 and MySql Database.
 You can see the list below, what APIs are available
+
 
 ## API List
 1. `/api/sys` [GET] To Check API is running 
@@ -27,13 +29,17 @@ You can see the list below, what APIs are available
 19. `/api/bid/cancel` [POST] To cancel bid
 
 
+
 ## Do you need a tutorial to run the service?
 OK, follow these steps
-1. Please download the sql file, here. And run the sql in your MySql
-2. Clone this repository
-3. Run command `npm install` to install node module package
-3. Run command `nodemon start www` to start your service
+1. Create database `CREATE DATABASE jitera` and then `USE jitera`
+2. Please download the sql file, [here](https://github.com/afatbenz/Auction-Project-using-nodejs/blob/main/db/jitera.sql). And run the sql in your MySql
+3. Clone this repository
+4. Run command `npm install` to install node module package
+5. Run command `nodemon start www` to start your service
+6. The service will running default on port 3100
+
 
 ## Want an example of using the API?
-Yes, you just need to import our postman collection. You can get it here.
+Yes, you just need to import our postman collection. You can get it [here](https://github.com/afatbenz/Auction-Project-using-nodejs/blob/main/db/Jitera.postman_collection.json).
 You only need to change the payload, query and parameters that have been provided
