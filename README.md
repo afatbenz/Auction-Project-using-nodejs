@@ -12,3 +12,28 @@ You can see the list below, what APIs are available
 4. `/api/auth/reset/validate-otp` [POST] OTP Validation to Reset Password
 5. `/api/auth/reset/submit-password` [POST] Submit New Password
 6. `/api/auth/login` [POST] Login to get session and token
+7. `/api/item/submit` [POST] Creating items to be auctioned
+8. `/api/item/list` [GET] List of auction
+9. `/api/item/detail/{id}` [GET] Detail Auction
+10. `/api/item/update` [POST] Update auctioned items
+11. `/api/item/delete` [POST] Delete auctioned items
+12. `/api/wallet/balance` [GET] Get Wallet Balance
+13. `/api/wallet/register` [POST] Registering Wallet Account
+14. `/api/wallet/transaction` [POST] Topup Wallet
+15. `/api/wallet/history` [GET] Get Transaction History
+16. `/api/bid/process` [POST] To submit a bid
+17. `/api/bid/accept` [POST] To accept bid
+18. `/api/bid/confirm` [POST] To confirm and purchase bid
+19. `/api/bid/cancel` [POST] To cancel bid
+
+
+## Do you need a tutorial to run the service?
+OK, follow these steps
+1. Please download the sql file, here. And run the sql in your MySql
+2. Clone this repository
+3. Run command `npm install` to install node module package
+3. Run command `nodemon start www` to start your service
+
+## Want an example of using the API?
+Yes, you just need to import our postman collection. You can get it here.
+You only need to change the payload, query and parameters that have been provided

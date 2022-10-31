@@ -1,0 +1,603 @@
+{
+	"info": {
+		"_postman_id": "2055fd32-1f3b-4d1b-be6c-04d7a8837097",
+		"name": "Jitera",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21153478"
+	},
+	"item": [
+		{
+			"name": "check system",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"afatbenz\",\r\n    \"email\": \"mafatichulfuadi@gmail.com\",\r\n    \"password\": \"Fatih123\",\r\n    \"confirm_password\": \"Fatih123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/sys",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"sys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"afatbenz\",\r\n    \"email\": \"mafatichulfuadi@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"confirm_password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/auth/register/submit",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"auth",
+						"register",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mafatichulfuadi@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password - OTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mafatichulfuadi@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/auth/reset/send-otp",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"auth",
+						"reset",
+						"send-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate OTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"otp\": \"59184\",\r\n    \"token\": \"JogaizkAyFfITcdos4OJfWg4DipU80koPInv5ruce9NE8+RAIyWZnfeqf0ifVhSI40g5biCaDKcBt3PE5pE/zso7CfmfzsvIk3aNXklK9iqx4+W760Tz5hq9tNpmNEg5wTbuDifuu7XPwb35XIc68KdJmLW1GRhs8LHZ8Dcg/a8B/BuFtJUua5rZamaRcj4bvqTsAN12s0ZKKdBaGyr+cA==\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/auth/reset/validate-otp",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"auth",
+						"reset",
+						"validate-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit New Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"123456\",\r\n    \"confirm_password\": \"123456\",\r\n    \"token\": \"JogaizkAyFfITcdos4OJfWg4DipU80koPInv5ruce9NHmLn3mL4CSSMAtds7kwcGE+TPdjRqrRIauPO1ZfWclhUAYq0AUJ5cmzFi7DxIh/XFVzC+NCchSwtZcD9itL7l\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/auth/reset/submit-password",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"auth",
+						"reset",
+						"submit-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mafatichulfuadi@gmail.com\",\r\n    \"password\": \"Fatih123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/auth/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Item - Submit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Honda Astrea Grand 97\",\r\n    \"description\": \"Unit dalam keadaan sebaik baiknya, pajak hidup belum pernah turun mesin\",\r\n    \"started_price\": \"5000000\",\r\n    \"started_date\": \"2022-10-31 12:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/item/submit",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"item",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Item - List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"afatbenz\",\r\n    \"description\": \"mafatichulfuadi@gmail.com\",\r\n    \"started_price\": \"200000\",\r\n    \"started_date\": \"2022-10-30 10:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/item/list",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"item",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Item - Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemID\": 1,\r\n    \"title\": \"Honda Scoopy FI 2020\",\r\n    \"description\": \"Motor dalam keadaan baik, tidak pernah mengalami kecelakaan\",\r\n    \"started_price\": \"10000000\",\r\n    \"started_date\": \"2022-10-31 10:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/item/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"item",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Item - Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/item/detail/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"item",
+						"detail",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Item - Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemID\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/item/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"item",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet - Balance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"afatbenz\",\r\n    \"description\": \"mafatichulfuadi@gmail.com\",\r\n    \"started_price\": \"200000\",\r\n    \"started_date\": \"2022-10-30 10:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/wallet/balance",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"wallet",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet- Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullname\": \"Mafatichul Fuadi\",\r\n    \"nik\": \"3404040404040123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/wallet/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"wallet",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet- Top Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"walletID\": \"1\",\r\n    \"keyword\": \"topup\",\r\n    \"credit\": 5000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/wallet/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"wallet",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet - History",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"afatbenz\",\r\n    \"description\": \"mafatichulfuadi@gmail.com\",\r\n    \"started_price\": \"200000\",\r\n    \"started_date\": \"2022-10-30 10:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/wallet/history",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"wallet",
+						"history"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "purchase",
+							"disabled": true
+						},
+						{
+							"key": "start_date",
+							"value": "2022-10-20",
+							"disabled": true
+						},
+						{
+							"key": "end_date",
+							"value": "2022-10-30",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bid - Process",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemID\": \"1\",\r\n    \"bid_offer\": 5760000,\r\n    \"notes\": \"additional notes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/bid/process",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"bid",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bid - Accept",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemID\": \"1\",\r\n    \"bidID\": \"6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/bid/accept",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"bid",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bid - Confirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"AB4Sykaml1jrwKvW1s9Th1dRtwpup1q41E2ZEHArCMKlbXysFprIgE1UKPoQOVRQ16h7tBX9A+idUlRvx5etiL82ESoHcv/KRqSDT/gtKm0=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3100/api/bid/confirm?token=token=AB4Sykaml1jrwKvW1s9Th1dRtwpup1q41E2ZEHArCMKlbXysFprIgE1UKPoQOVRQ16h7tBX9A+idUlRvx5etiL82ESoHcv/KRqSDT/gtKm0=",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"api",
+						"bid",
+						"confirm"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token=AB4Sykaml1jrwKvW1s9Th1dRtwpup1q41E2ZEHArCMKlbXysFprIgE1UKPoQOVRQ16h7tBX9A+idUlRvx5etiL82ESoHcv/KRqSDT/gtKm0="
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
