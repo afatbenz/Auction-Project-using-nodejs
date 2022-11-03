@@ -1,7 +1,6 @@
 const { exist } = require('@hapi/joi');
 const express 			= require('express');
 const router  			= express.Router();
-const request             = require('request');
 
 const cdate   = new Date();
 const csecond = cdate.getSeconds();
